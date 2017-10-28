@@ -87,7 +87,7 @@ Sure!
 A simple [matplotlib](http://matplotlib.org)-based demo in `charts.py` shows the great progress of EU countries in 
 reducing Methane emissions: 
 
-![Methane Down](https://github.com/adam-p/markdown-here/raw/master/src/common/images/methane_down.png)
+![Methane Down](https://raw.githubusercontent.com/sphericalpm/ghgdata/master/images/methane_down.png)
  
 
 ## Legal status of this data
