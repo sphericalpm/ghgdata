@@ -16,15 +16,15 @@ The uid should be CAPITALIZED.
 The response is JSON in the following format: 
 
 ```json
-{"years":[<list-of-years>],
+{"years":[list,of,years],
  "series":{
-  "<party-code>":[<list-of-values>]}
+  "<party-code>":[list,of,values]}
 }
 ```
 Where: 
 
 * `list-of-years` is a list of strings with year names (brows back down and see below in gotchas) sorted alphabetically
-* `party-code` is a three-letter code of the Party. In most cases, but not always, this is ISO ALPHA-3 code.
+* `party-code` is a three-letter code of the Party. In most cases, but not always, this is [ISO ALPHA-3](https://www.iso.org/obp/ui/#search) code.
 * `list-of-values` is a list of record values sorted according to the years in `list-of-years`
 
 ### Where do I get the variable uid? 
@@ -44,6 +44,21 @@ like, and Hungary used this freedom to name one of their years "1985-1987". In a
 used as baseline for calculating the Party's performance in GHG reduction. This year is named "Base Year". Most of the 
 time, you will not be needing these years but you'll need to filter them out on your side
  
+#### Funny country codes
+
+Most country codes are not ISO country codes. A UNFCCC-invented three-letter codes are used where an ISO country code 
+is not available for a reporting entity. In particular:  
+
+* Sub-countries reporting separately:
+  * Belgium: `BRU` is Brussels, `WAL` is Wallonia, `FLA` is Flanders
+  * UK: `GBE` is UK excluding overseas territories that are not part of EU
+* Countries reporting under the Convention and under the Kyoto Protocol separately:
+  * Denmark: `DKE` is for the 1st commitment period of the Kyoto Protocol, `DNM` is for the 2nd
+  * France: `FRK` is France's report under the Kyoto Protocol
+  * UK: `GBK` is UK's report under the Kyoto Protocol
+* Non-countries considered Parties to UNFCCC
+  * EU: `EUA` is European Union, EUC is European Union's report under the Kyoto Protocol  
+
 #### Nulls
 According to the rules, complete GHG inventories shall not have empty records or zeroes. At the same time, there is a number
 of situations when a record does not contain a valid numeric value:
