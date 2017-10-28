@@ -9,7 +9,7 @@ data on a single-variable level.
 ## How do I access GHG Data? 
 Data is available on Amazon S3, in JSON format, one file per inventory variable. The URL format is 
  
-http://ghg-data.s3-website.eu-central-1.amazonaws.com/<VARIABLE-UID>.json
+http://ghg-data.s3-website.eu-central-1.amazonaws.com/`VARIABLE-UID`.json
 
 The uid should be CAPITALIZED. 
 
