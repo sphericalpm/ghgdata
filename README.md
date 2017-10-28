@@ -3,13 +3,13 @@
 ## What is this?
 GHG Data is a dataset compiled out of national greenhouse gas (GHG) inventory submissions by 
 [Annex I](http://unfccc.int/parties_and_observers/parties/annex_i/items/2774.php) Parties to 
-[UNFCCC](http://unfccc.int). The primary purpose of this dataset is to simplify comparison of and charting of GHG
+[UNFCCC](http://unfccc.int). The primary purpose of this dataset is to simplify comparison and charting of GHG
 data on a single-variable level. 
 
 ## How do I access GHG Data? 
 Data is available on Amazon S3, in JSON format, one file per inventory variable. The URL format is 
  
-http://ghg-data.s3-website.eu-central-1.amazonaws.com/`VARIABLE-UID`.json
+http://ghg-data.s3-website.eu-central-1.amazonaws.com/VARIABLE-UID.json
 
 The uid should be CAPITALIZED. 
 
@@ -24,7 +24,7 @@ The response is JSON in the following format:
 Where: 
 
 * `"list","of","years"` is a list of strings with year names (brows back down and see below in gotchas) sorted alphabetically
-* `party-code` is a three-letter code of the Party. In most cases, but not always, this is [ISO ALPHA-3](https://www.iso.org/obp/ui/#search) code.
+* `party-code` is a three-letter code of the Party. In most cases, but not always, this is an [ISO ALPHA-3](https://www.iso.org/obp/ui/#search) code.
 * `"list","of","values"` is a list of record values sorted according to the years in `"list","of","years"`
 
 ### Where do I get the variable uid? 
@@ -34,19 +34,20 @@ available [here](https://confluence.unfccc.int/download/attachments/17137769/met
 If you are a user of UNFCCC CRF Reporter, you may see variable UIDs when you export reporting tables with uids. 
 If you are a user of Spherical's [National Inventory System](http://nis.spherical.pm), you will find uids of variables
 on cell info boxes on all data entry and reporting views. If you are neither, making sense of variable uids is not easy.
+[Ask Spherical](mailto:support@spherical.pm), we will help. 
 
 ### Gotchas
 _"Life is really simple, but we insist on making it complicated"_ - Confucius
 
 #### Funny year names
-Years are not numbered but rather named. This is because Parties are free to to name their reporting years the way they 
+Years are not numbered but rather named. This is because Parties are free to name their reporting years the way they 
 like, and Hungary used this freedom to name one of their years "1985-1987". In addition to that, there is a year that is
 used as baseline for calculating the Party's performance in GHG reduction. This year is named "Base Year". Most of the 
-time, you will not be needing these years but you'll need to filter them out on your side
+time, you will not be needing these years but you'll need to filter them out on your side.
  
 #### Funny country codes
 
-Most country codes are not ISO country codes. A UNFCCC-invented three-letter codes are used where an ISO country code 
+Most country codes are ISO country codes. A UNFCCC-invented three-letter codes are used where an ISO country code 
 is not available for a reporting entity. In particular:  
 
 * Sub-countries reporting separately:
@@ -57,19 +58,18 @@ is not available for a reporting entity. In particular:
   * France: `FRK` is France's report under the Kyoto Protocol
   * UK: `GBK` is UK's report under the Kyoto Protocol
 * Non-countries considered Parties to UNFCCC
-  * EU: `EUA` is European Union, `EUC` is European Union's report under the Kyoto Protocol  
+  * EU: `EUA` is European Union, `EUC` is European Union's report under the Kyoto Protocol
 
 #### Nulls
-According to the rules, complete GHG inventories shall not have empty records or zeroes. At the same time, there is a number
-of situations when a record does not contain a valid numeric value:
-* The variable is non-numeric. 
+According to the rules, complete GHG inventories shall not have empty records or zeroes. At the same time, there is a 
+number of situations when a record does not contain a valid numeric value:
+* The variable is non-numeric
 * The Party could not report a number for some reason (the data point is zero, confidential, included in another 
 variable or unavailable)
 * The year is not applicable for the Party
 
 In these cases the dataset will include `null` for the record. GHG management software usually treats most of such
-cases as zeroes. If you are using the dataset for charting purposes and your charting library allows, it is better to 
-use "missing dots" on the chart. 
+records as zeroes. 
 
 ## How fresh is the dataset? 
 
