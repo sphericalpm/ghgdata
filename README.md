@@ -84,6 +84,12 @@ Sure!
 * [A4543811-91B0-4DE7-B239-83F43DF6DF4E](http://ghg-data.s3-website.eu-central-1.amazonaws.com/A4543811-91B0-4DE7-B239-83F43DF6DF4E.json) - Emissions from waste in `kt CO2 equivalent`
 * [A5A0958C-BDF7-43CA-BE3C-EB76B9A24348](http://ghg-data.s3-website.eu-central-1.amazonaws.com/A5A0958C-BDF7-43CA-BE3C-EB76B9A24348.json) - Number of sheep in the country :) in `thousands`
 
+A simple [matplotlib](http://matplotlib.org)-based demo in `charts.py` shows the great progress of EU countries in 
+reducing Methane emissions: 
+
+![Methane Down](https://github.com/adam-p/markdown-here/raw/master/src/common/images/methane_down.png)
+ 
+
 ## Legal status of this data
 All data is produced by national governments and officially reported to the UN. Data is further dedicated to public 
 domain by UNFCCC. This work, presented by [Spherical](http://www.spherical.pm), is a repackaging of public domain 
