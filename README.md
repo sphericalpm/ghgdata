@@ -60,6 +60,14 @@ is not available for a reporting entity. In particular:
 * Non-countries considered Parties to UNFCCC
   * EU: `EUA` is European Union, `EUC` is European Union's report under the Kyoto Protocol
 
+#### Funny numbers
+
+All numbers in the inventory ard floating point numbers, with 
+[all floating number fun to be expected](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html). In addition
+to that, some data may be a result of complex calculations in national or UN software that are not rounded 
+properly to make sense. Do not be surprised to see a country reporting a quarter of a cow and handle it appropriately
+in your solutions   
+
 #### Nulls
 According to the rules, complete GHG inventories shall not have empty records or zeroes. At the same time, there is a 
 number of situations when a record does not contain a valid numeric value:
@@ -99,6 +107,10 @@ data which Spherical further dedicates to public domain. Important notes:
 national government or [from UNFCCC directly](http://unfccc.int/national_reports/annex_i_ghg_inventories/national_inventories_submissions/items/10116.php).
 * Continuous availability of data is not pledged. The service may be interrupted or discontinued without notice. 
 * Programming errors and irregularities in the original dataset may have led to errors in this data. No responsibility
-is assumed for such errors. If you believe that you have found an error, please let us know. 
+is assumed for such errors. If you believe that you have found an error, please let us know.
+* We also reserve the right to change the API at any moment and without notice. Such changes will be made primarily to 
+enrich data offered and therefore have backward compatibility. If you are using the dataset, you are advised to program 
+your solutions in a way that they are tolerant to the expansion of the schema and changes to data volume.
+
  
  
