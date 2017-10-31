@@ -39,13 +39,13 @@ on cell info boxes on all data entry and reporting views. If you are neither, ma
 ### Gotchas
 _"Life is really simple, but we insist on making it complicated"_ - Confucius
 
-#### Funny year names
+#### Non-numeric year names
 Years are not numbered but rather named. This is because Parties are free to name their reporting years the way they 
 like, and Hungary used this freedom to name one of their years "1985-1987". In addition to that, there is a year that is
 used as baseline for calculating the Party's performance in GHG reduction. This year is named "Base Year". Most of the 
 time, you will not be needing these years but you'll need to filter them out on your side.
  
-#### Funny country codes
+#### Non-ISO country codes
 
 Most country codes are ISO country codes. A UNFCCC-invented three-letter codes are used where an ISO country code 
 is not available for a reporting entity. In particular:  
