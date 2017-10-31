@@ -62,11 +62,11 @@ is not available for a reporting entity. In particular:
 
 #### Funny numbers
 
-All numbers in the inventory ard floating point numbers, with 
+All numbers in the inventory are floating point numbers, with 
 [all floating number fun to be expected](https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html). In addition
 to that, some data may be a result of complex calculations in national or UN software that are not rounded 
 properly to make sense. Do not be surprised to see a country reporting a quarter of a cow and handle it appropriately
-in your solutions   
+in your solutions.   
 
 #### Nulls
 According to the rules, complete GHG inventories shall not have empty records or zeroes. At the same time, there is a 
